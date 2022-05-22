@@ -1,0 +1,16 @@
+from keep_alive import keep_alive
+client = discord.Client()
+
+@client.event
+async def on_ready():
+  
+  @client.event
+  async def on_message(message):
+    if message.author == client.user:
+      return
+   
+    if message.content.startswith('bodrick'):
+      await message.channel.send('Kill yourself')
+
+    if message.content.startswith('i'):
+      await message.channel.send('I am inside your house.')
